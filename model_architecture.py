@@ -109,13 +109,13 @@ class ViT(nn.Module):
         
     def forward(self,images):
         n, c, h, w = images.shape
-        patches = patchify(images, self.n_patches)
+        patches = patchify(images, self.n_patches).to(images.device)
         
         tokens=self.linear_mapper(patches)
         
         tokens = torch.stack([torch.vstack((self.class_token, tokens[i])) for i in range(len(tokens))])
 
-        pos_embed = self.pos_embed.repeat(n, 1, 1)
+        pos_embed = self.pos_embed.to(images.device).repeat(n, 1, 1)
         out = tokens + pos_embed
         
         for block in self.blocks:
