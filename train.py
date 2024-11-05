@@ -42,6 +42,9 @@ criterion = CrossEntropyLoss()
 if __name__=='__main__':
     train_losses, test_losses, test_accuracies = [], [], []
     
+    total_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    print(f"Total number of trainable parameters: {total_params}")
+    
     #Training
     for epoch in range(epochs):
         model.train()
