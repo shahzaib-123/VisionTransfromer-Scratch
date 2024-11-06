@@ -31,22 +31,27 @@ To set up this project, you will need  following packages:
 - matplotlib
 
 ## Usage
-1. Clone the repository  
-  ```bash
-  git clone https://github.com/shahzaib-123/VisionTransfromer-Scratch.git
-  cd VisionTransfromer-Scratch
-  ```
-2. Run the training script:
-  ```bash
-  python train.py
-  ```
-3. results are saved in the runs directory:
-  * Model Weights: *runs/model_weights.pth*
-  * Confusion Matrix: confusion matrix saved in *(runs/confusion_matrix.csv)*
-  * Loss Curve per epoch: Train and test loss curves *(runs/loss_curve.png)*
-  * Training Loss per Step: Detailed training loss *(runs/train_loss_steps.png)*
-  * Accuracy Curve: Accuracy over epochs *(runs/accuracy_curve.png)*
-4. Configuration Options: You can modify model parameters in *model_architecture.py* and adjust training hyperparameters, like learning rate and batch size, in *train.py*
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/shahzaib-123/VisionTransfromer-Scratch.git
+    cd VisionTransfromer-Scratch
+    ```
+2. Install Dependencies:
+    ```bash
+    chmod +x requirements.sh
+    ./requirements.sh
+    ```
+3. Run the training script:
+    ```bash
+    python train.py
+    ```
+4. Results are saved in the runs directory:
+    * Model Weights: *runs/model_weights.pth*
+    * Confusion Matrix: confusion matrix saved in *(runs/confusion_matrix.csv)*
+    * Loss Curve per epoch: Train and test loss curves *(runs/loss_curve.png)*
+    * Training Loss per Step: Detailed training loss *(runs/train_loss_steps.png)*
+    * Accuracy Curve: Accuracy over epochs *(runs/accuracy_curve.png)*
+5. Configuration Options: You can modify model parameters in *model_architecture.py* and adjust training hyperparameters, like learning rate and batch size, in *train.py*
 
 ## Model Architecture
 The Vision Transformer model is defined in *model_architecture.py* and includes the following major components:
