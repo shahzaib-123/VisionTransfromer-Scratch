@@ -122,6 +122,7 @@ The Vision Transformer model is defined in `models/` with related utilities in `
   * Positional Embedding: Positional encodings are added to patch embeddings to maintain spatial information.
   * Transformer Layers: Multiple ViT blocks process the embeddings to learn representations.
   * Classification Head: Maps the final output of the class token to class probabilities using a softmax function.
+
 Example of ViT initialization:
 ```python
 model = ViT((3, 32, 32), n_patches=8, n_blocks=2, hidden_d=32, n_heads=2, out_d=10).to(device)
