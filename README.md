@@ -2,7 +2,7 @@
 <div align="center">
     <a href="https://github.com/shahzaib-123/VisionTransfromer-Scratch/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/shahzaib-123/VisionTransfromer-Scratch?color=yellow&label=Project%20Stars&style=for-the-badge"></a>
     <a href="https://github.com/shahzaib-123/VisionTransfromer-Scratch/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/shahzaib-123/VisionTransfromer-Scratch?color=brightgreen&label=issues&style=for-the-badge"></a>
-    <a href="https://github.com/shahzaib-123/VisionTransfromer-Scratch/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/shahzaib-123/VisionTransfromer-Scratch?color=9cf&label=forks&style=for-the-badge"></a>
+    <a href="https://github.com/shahzaib-123/VisionTransfromer-Scratch/forks"><img alt="GitHub forks" src="https://img.shields.io/github/forks/shahzaib-123/VisionTransfromer-Scratch?color=9cf&label=forks&style=for-the-badge"></a>
 </div>
 <br>
 
