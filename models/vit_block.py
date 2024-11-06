@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import numpy as np
+from models.msa import MSA
 
 class ViTBlock(nn.Module):
     def __init__(self, hidden_d, n_heads, mlp_ratio=4):

@@ -1,6 +1,9 @@
 import torch
 import torch.nn as nn
 import numpy as np
+from utilities.UTILS import patchify, get_positional_embeddings
+from models.msa import MSA
+from models.vit_block import ViTBlock
 
 class ViT(nn.Module):
     def __init__(self, chw, n_patches=7, n_blocks=2, hidden_d=8, n_heads=2, out_d=10):
