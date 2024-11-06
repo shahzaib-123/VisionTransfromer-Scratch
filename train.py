@@ -1,18 +1,25 @@
-import numpy as np
-import torch
+import warnings
+warnings.filterwarnings("ignore")
+
 import os
+import numpy as np
+import matplotlib.pyplot as plt
+
+import torch
 import torch.nn as nn
 from torch.optim import Adam
 from torch.nn import CrossEntropyLoss
+
 from torch.utils.data import DataLoader
 from torchvision.transforms import ToTensor
 from torchvision.datasets import CIFAR10
 from sklearn.metrics import confusion_matrix, precision_score, recall_score
-import matplotlib.pyplot as plt
-import warnings
-warnings.filterwarnings("ignore")
 
-from model_architecture import *
+
+from utilities import patchify, get_positional_embeddings
+from models import MSA
+from models import ViTBlock
+from models import ViT
 
 run_dir = 'runs'
 os.makedirs(run_dir, exist_ok=True)
