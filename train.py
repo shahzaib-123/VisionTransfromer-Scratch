@@ -29,14 +29,14 @@ transform = ToTensor()
 train = CIFAR10(root='data', train=True, download=True, transform=transform)
 test = CIFAR10(root='data', train=False, download=True, transform=transform)
 
-train_loader = DataLoader(train, shuffle=True, batch_size=512)
-test_loader = DataLoader(test, shuffle=False, batch_size=512)
+train_loader = DataLoader(train, shuffle=True, batch_size=1024)
+test_loader = DataLoader(test, shuffle=False, batch_size=1024)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = ViT((3, 32, 32), n_patches=8, n_blocks=4, hidden_d=64, n_heads=4, out_d=10).to(device)
 epochs = 60
-lr = 0.005
+lr = 0.001
 optimizer = Adam(model.parameters(), lr=lr)
 criterion = CrossEntropyLoss()
 
