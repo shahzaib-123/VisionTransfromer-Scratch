@@ -35,8 +35,8 @@ test_loader = DataLoader(test, shuffle=False, batch_size=512)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = ViT((3, 32, 32), n_patches=8, n_blocks=4, hidden_d=64, n_heads=4, out_d=10).to(device)
-epochs = 20
-lr = 0.001
+epochs = 60
+lr = 0.005
 optimizer = Adam(model.parameters(), lr=lr)
 criterion = CrossEntropyLoss()
 
@@ -91,7 +91,7 @@ if __name__ == '__main__':
         test_losses.append(test_loss)
         test_accuracies.append(test_accuracy)
         
-        print(f"Test loss: {test_loss:.3f}, Test accuracy: {test_accuracy:.3f}%")
+        print(f"Test loss: {test_loss:.3f}, Test accuracy: {test_accuracy:.2f}%")
     
     model_path = os.path.join(run_dir, 'model_weights.pth')
     torch.save(model.state_dict(), model_path)
