@@ -140,3 +140,4 @@ model = ViT((3, 32, 32), n_patches=8, n_blocks=2, hidden_d=32, n_heads=2, out_d=
 
 ## Contact
 * shahasghar054@gmail.com
+* <a href="https://www.linkedin.com/in/shahzaib600/">linkedin.com/shahzaib600<a/>
